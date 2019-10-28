@@ -78,6 +78,9 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         //print(fetchResultsJP[indexPath.section].jCharHistory)
         //ACCESSING HISTORY VALUES DOESN'T WORK HERE FOR ?????? REASONS.
+        
+        
+        
         if language == "Japanese" {
             cell.textLabel?.text = "\(fetchResultsJP[indexPath.section].jpCharLiteralChar ?? "") Keyword: \(fetchResultsJP[indexPath.section].jpCharKeyword ?? "")"
         } else {

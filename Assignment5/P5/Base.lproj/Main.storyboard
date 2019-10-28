@@ -187,9 +187,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x4d-Ww-4RU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x4d-Ww-4RU">
                                 <rect key="frame" x="20" y="44" width="374" height="818"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HistoryCell" rowHeight="102" id="sUF-vT-FXR">
@@ -208,6 +207,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="x4d-Ww-4RU" firstAttribute="leading" secondItem="Krc-wX-RB8" secondAttribute="leading" constant="20" id="89E-fy-LuJ"/>
+                            <constraint firstItem="Krc-wX-RB8" firstAttribute="bottom" secondItem="x4d-Ww-4RU" secondAttribute="bottom" id="acB-lM-w5T"/>
+                            <constraint firstItem="x4d-Ww-4RU" firstAttribute="top" secondItem="Krc-wX-RB8" secondAttribute="top" id="gQS-Eu-eBm"/>
+                            <constraint firstItem="Krc-wX-RB8" firstAttribute="trailing" secondItem="x4d-Ww-4RU" secondAttribute="trailing" constant="20" id="wPF-cj-GP2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Krc-wX-RB8"/>
                     </view>
                 </viewController>
@@ -330,9 +335,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bG8-nA-HHa">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bG8-nA-HHa">
                                 <rect key="frame" x="20" y="44" width="374" height="818"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HistoryCell" rowHeight="102" id="Yty-qN-KaJ">
@@ -351,6 +355,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bG8-nA-HHa" firstAttribute="leading" secondItem="Rm3-Ro-8el" secondAttribute="leading" constant="20" id="c5M-z6-Qnz"/>
+                            <constraint firstItem="bG8-nA-HHa" firstAttribute="top" secondItem="Rm3-Ro-8el" secondAttribute="top" id="qiv-XM-O0c"/>
+                            <constraint firstItem="Rm3-Ro-8el" firstAttribute="bottom" secondItem="bG8-nA-HHa" secondAttribute="bottom" id="tDo-Hw-2uM"/>
+                            <constraint firstItem="Rm3-Ro-8el" firstAttribute="trailing" secondItem="bG8-nA-HHa" secondAttribute="trailing" constant="20" id="xpf-t3-ffd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Rm3-Ro-8el"/>
                     </view>
                 </viewController>
