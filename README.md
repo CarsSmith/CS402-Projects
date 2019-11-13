@@ -1,8 +1,10 @@
 # CS402-Projects-Carson-Smith
 GitHub Repo for CS402 at Boise State University - Fall 2019
 
+Total Time Spent on Final Project so far:
+21 Hours.
 
-Remaining Final Project TODO List as of 11/13, after the full implementation of the drawView. 
+Remaining Final Project TODO List as of 11/13, after the full implementation of the drawView:
 
 1. Set them up as gifs
 2. Add stroke/character info to the first screen
