@@ -15,8 +15,8 @@ Remaining Final Project TODO List as of 11/13, after the full implementation of 
 7. Have stuff show up in history
 8. Fix the lasting NSSet bug
 9. Implement a 'show answer/hint' ability.
-10. Make it iterate through all options before showing you something you've done already.
+10. ~~Make it iterate through all options before showing you something you've done already.~~
 11. Ensure history downswipe functionality still works.
-12. Prevent further changes after doneButton is pressed.
+12. ~~Prevent further changes after doneButton is pressed.~~
 13. Set things up to work for CN and not just JP.
 14. All yellow errors that are popping up.
