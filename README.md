@@ -11,7 +11,7 @@ Remaining Final Project TODO List as of 11/13, after the full implementation of 
 3. make it work cleanly for other phone types/sizes
 4. Store picture of drawing
 5. have faded background lines for the drawing area to split it into quadrants
-``6. make the undo button work.``
+~~6. make the undo button work.~~
 7. Have stuff show up in history
 8. Fix the lasting NSSet bug
 9. Implement a 'show answer/hint' ability.
