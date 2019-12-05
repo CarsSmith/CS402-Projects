@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15400" systemVersion="18G103" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CharacterHistory" representedClassName="CharacterHistory" syncable="YES" codeGenerationType="class">
+        <attribute name="historyDate" attributeType="String"/>
+        <attribute name="historyResult" attributeType="String"/>
+        <relationship name="guessedCharacterCN" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CNCharacter" inverseName="cCharHistory" inverseEntity="CNCharacter"/>
+        <relationship name="guessedCharacterJP" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="JPCharacter" inverseName="jCharHistory" inverseEntity="JPCharacter"/>
+    </entity>
+    <entity name="CNCharacter" representedClassName="CNCharacter" syncable="YES" codeGenerationType="class">
+        <attribute name="cnCharImage" optional="YES" attributeType="String"/>
+        <attribute name="cnCharKeyword" attributeType="String"/>
+        <attribute name="cnCharLiteralChar" optional="YES" attributeType="String"/>
+        <attribute name="cnCharReading" attributeType="String"/>
+        <attribute name="cnCharStrokeCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="cCharHistory" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CharacterHistory" inverseName="guessedCharacterCN" inverseEntity="CharacterHistory"/>
+    </entity>
+    <entity name="JPCharacter" representedClassName="JPCharacter" syncable="YES" codeGenerationType="class">
+        <attribute name="jpCharImage" optional="YES" attributeType="String" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="jpCharKeyword" attributeType="String"/>
+        <attribute name="jpCharKunReading" optional="YES" attributeType="String"/>
+        <attribute name="jpCharLiteralChar" optional="YES" attributeType="String"/>
+        <attribute name="jpCharOnReading" optional="YES" attributeType="String"/>
+        <attribute name="jpCharStrokeCount" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="jCharHistory" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CharacterHistory" inverseName="guessedCharacterJP" inverseEntity="CharacterHistory"/>
+    </entity>
+    <elements>
+        <element name="CharacterHistory" positionX="-227" positionY="24" width="128" height="103"/>
+        <element name="CNCharacter" positionX="-219" positionY="227" width="128" height="133"/>
+        <element name="JPCharacter" positionX="-226" positionY="-176" width="128" height="148"/>
+    </elements>
+</model>
