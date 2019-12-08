@@ -17,7 +17,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-                
+        chineseOptionButton.layer.cornerRadius = 10
+        japaneseOptionButton.layer.cornerRadius = 10
+        decorativeOrLabel.layer.cornerRadius = 10
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
         
         view.addGestureRecognizer(tap)
@@ -25,12 +27,14 @@ class ViewController: UIViewController {
 
     @IBAction func JPSelected(_ sender: Any) {
         let flashcardJPViewController = storyboard?.instantiateViewController(identifier: "FlashcardJPViewController")
+        flashcardJPViewController!.modalPresentationStyle = .fullScreen
         self.present(flashcardJPViewController!, animated: true, completion: nil)
     }
     
     @IBAction func CNSelected(_ sender: Any) {
-        //TODO: THIS IS SET TO SEND EVERYTHING TO THE JP VIEWCONTROLLER. JUST GET JP WORKING FIRST OR SOMETHING
+        
          let flashcardCNViewController = storyboard?.instantiateViewController(identifier: "FlashcardCNViewController")
+        flashcardCNViewController!.modalPresentationStyle = .fullScreen
         self.present(flashcardCNViewController!, animated: true, completion: nil)
     }
 }

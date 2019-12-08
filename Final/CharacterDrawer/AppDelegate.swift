@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         newJPCLarge.jpCharKunReading = "おお-"
         newJPCLarge.jpCharStrokeCount = 3
         newJPCLarge.jpCharImage = "JPLarge.png"
+        //newJPCLarge.jpCharImage = "JPLarge.gif"
         
         let newJPCDepression:JPCharacter = JPCharacter(context: context)
         

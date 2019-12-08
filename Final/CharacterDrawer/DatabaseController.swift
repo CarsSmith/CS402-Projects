@@ -16,14 +16,14 @@ class DatabaseController {
     static func managedObjectContext() -> NSPersistentContainer {
         
         if( persistentContainer == nil) {
-            persistentContainer = NSPersistentContainer(name: "CharacterDrawer")
+            persistentContainer = NSPersistentContainer(name: "P5")
             persistentContainer!.loadPersistentStores { (storeDescription, error) in
                 if let error = error as NSError? {
                     fatalError("Unresolved error \(error), \(error.userInfo)")
                 }
             }
         }
-        return persistentContainer!∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂
+        return persistentContainer!
     }
 
     // MARK: - Core Data Saving support

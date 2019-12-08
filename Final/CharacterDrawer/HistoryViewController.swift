@@ -9,6 +9,17 @@
 import UIKit
 import CoreData
 
+
+class HistoryTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var historyDefaultImageView: UIImageView!
+    @IBOutlet weak var historyResultLabel: UILabel!
+    @IBOutlet weak var historyDateLabel: UILabel!
+    @IBOutlet weak var historyKeywordLabel: UILabel!
+    @IBOutlet weak var historyAttemptImageView: UIImageView!
+}
+
+
 class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var context = DatabaseController.managedObjectContext().viewContext
@@ -20,7 +31,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //self.registerTableViewCells()
         if( self.restorationIdentifier == "CNHistoryViewController") {
              language = "Chinese"
         } else if self.restorationIdentifier == "JPHistoryViewController" {
@@ -70,21 +81,39 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 75
+        return 200
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell")!
-        
-        
-        //print(fetchResultsJP[indexPath.section].jCharHistory)
-        //ACCESSING HISTORY VALUES DOESN'T WORK HERE FOR ?????? REASONS.
-        
-        
+        let cell = (tableView.dequeueReusableCell(withIdentifier: "HistoryTableViewCell") as! HistoryTableViewCell)
         
         if language == "Japanese" {
-            cell.textLabel?.text = "\(fetchResultsJP[indexPath.section].jpCharLiteralChar ?? "") Keyword: \(fetchResultsJP[indexPath.section].jpCharKeyword ?? "")"
+            let historySet = fetchResultsJP[indexPath.section].jCharHistory!
+            let historyArray:[CharacterHistory] = historySet.allObjects as! [CharacterHistory]
+            let historyItem = historyArray[indexPath.row]
+            let historyItemDate = historyItem.historyDate
+            let historyItemImage = historyItem.historyImage!
+            let historyItemResult = historyItem.historyResult
+            cell.historyDefaultImageView.image = UIImage(named: fetchResultsJP[indexPath.section].jpCharImage ?? "")
+            cell.historyDateLabel.text = "Date: \(historyItemDate ?? "")"
+            cell.historyResultLabel.text = "\(historyItemResult ?? "")"
+            cell.historyKeywordLabel.text = "Keyword: \(fetchResultsJP[indexPath.section].jpCharKeyword ?? "")"
+            
+            let attemptImage:UIImage = UIImage(data: historyItemImage)!
+            cell.historyAttemptImageView.image = attemptImage
         } else {
-            cell.textLabel?.text = "\(fetchResultsCN[indexPath.section].cnCharLiteralChar ?? "") Keyword: \(fetchResultsCN[indexPath.section].cnCharKeyword ?? "")"
+            let historySet = fetchResultsCN[indexPath.section].cCharHistory!
+            let historyArray:[CharacterHistory] = historySet.allObjects as! [CharacterHistory]
+            let historyItem = historyArray[indexPath.row]
+            let historyItemDate = historyItem.historyDate
+            let historyItemImage = historyItem.historyImage!
+            let historyItemResult = historyItem.historyResult
+            cell.historyDefaultImageView.image = UIImage(named: fetchResultsCN[indexPath.section].cnCharImage ?? "")
+            cell.historyDateLabel.text = "Date: \(historyItemDate ?? "")"
+            cell.historyResultLabel.text = "\(historyItemResult ?? "")"
+            cell.historyKeywordLabel.text = "Keyword: \(fetchResultsCN[indexPath.section].cnCharKeyword ?? "")"
+            
+            let attemptImage:UIImage = UIImage(data: historyItemImage)!
+            cell.historyAttemptImageView.image = attemptImage
         }
         return cell
     }
