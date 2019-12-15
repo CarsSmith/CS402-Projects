@@ -11,15 +11,14 @@ import CoreData
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var chineseOptionButton: UIButton!
-    @IBOutlet weak var decorativeOrLabel: UILabel!
     @IBOutlet weak var japaneseOptionButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         chineseOptionButton.layer.cornerRadius = 10
         japaneseOptionButton.layer.cornerRadius = 10
-        decorativeOrLabel.layer.cornerRadius = 10
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
         
         view.addGestureRecognizer(tap)

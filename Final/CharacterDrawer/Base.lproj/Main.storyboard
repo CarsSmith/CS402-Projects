@@ -10,72 +10,85 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="P5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CharacterDrawer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character Drawer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHL-KL-klY">
+                                <rect key="frame" x="50" y="71" width="315" height="50.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rP-X4-MKJ">
-                                <rect key="frame" x="68" y="310" width="278" height="63"/>
+                                <rect key="frame" x="68" y="466" width="278" height="185.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6rP-X4-MKJ" secondAttribute="height" multiplier="3:2" id="yJ8-Kq-5nz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="Japanese"/>
+                                <state key="normal" backgroundImage="Flag-Japan"/>
                                 <connections>
                                     <action selector="JPSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NbR-pa-InO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0G-ks-7FG">
-                                <rect key="frame" x="68" y="542" width="278" height="63"/>
+                                <rect key="frame" x="68" y="259" width="278" height="185"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="a0G-ks-7FG" secondAttribute="height" multiplier="3:2" id="56R-uD-2PK"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="Chinese"/>
+                                <state key="normal" backgroundImage="Flag-China"/>
                                 <connections>
                                     <action selector="CNSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MUI-aN-9rs"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fg9-3b-tHa">
-                                <rect key="frame" x="147" y="437" width="120" height="32"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="GN2-G0-HGy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Language:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhS-s9-3mE">
+                                <rect key="frame" x="100" y="204" width="214" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Fg9-3b-tHa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="147" id="1Yd-JH-9tV"/>
+                            <constraint firstItem="a0G-ks-7FG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="1pK-uy-fTz"/>
+                            <constraint firstItem="dHL-KL-klY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="AyR-eP-AMH"/>
                             <constraint firstItem="6rP-X4-MKJ" firstAttribute="leading" secondItem="a0G-ks-7FG" secondAttribute="leading" id="Csc-oY-fMe"/>
                             <constraint firstItem="6rP-X4-MKJ" firstAttribute="height" secondItem="a0G-ks-7FG" secondAttribute="height" id="FSu-dp-j6D"/>
+                            <constraint firstItem="a0G-ks-7FG" firstAttribute="top" secondItem="zhS-s9-3mE" secondAttribute="bottom" constant="23" id="G2X-Nt-iok"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zhS-s9-3mE" secondAttribute="trailing" constant="100" id="HWg-tM-gj1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6rP-X4-MKJ" secondAttribute="bottom" constant="210.5" id="HlD-Nr-RDA"/>
+                            <constraint firstItem="zhS-s9-3mE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="HpL-yI-sH5"/>
                             <constraint firstItem="6rP-X4-MKJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="NnI-Gj-r9v"/>
-                            <constraint firstItem="Fg9-3b-tHa" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="VoR-vS-EdG"/>
-                            <constraint firstItem="Fg9-3b-tHa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="W02-SZ-OpL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6rP-X4-MKJ" secondAttribute="trailing" constant="68" id="Wsy-fb-c0I"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a0G-ks-7FG" secondAttribute="trailing" constant="68" id="XON-cV-SBc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a0G-ks-7FG" secondAttribute="trailing" constant="68" id="a2e-bG-00l"/>
                             <constraint firstItem="a0G-ks-7FG" firstAttribute="width" secondItem="6rP-X4-MKJ" secondAttribute="width" id="eM8-oO-cUW"/>
-                            <constraint firstItem="a0G-ks-7FG" firstAttribute="top" secondItem="Fg9-3b-tHa" secondAttribute="bottom" constant="73" id="eQi-qA-yul"/>
-                            <constraint firstItem="6rP-X4-MKJ" firstAttribute="centerX" secondItem="Fg9-3b-tHa" secondAttribute="centerX" id="tKL-eK-YGI"/>
-                            <constraint firstItem="Fg9-3b-tHa" firstAttribute="top" secondItem="6rP-X4-MKJ" secondAttribute="bottom" constant="64" id="zCo-AT-2Lg"/>
+                            <constraint firstItem="6rP-X4-MKJ" firstAttribute="top" secondItem="a0G-ks-7FG" secondAttribute="bottom" constant="22" id="ny5-WE-K2D"/>
+                            <constraint firstItem="dHL-KL-klY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="o1Q-Ij-7t0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dHL-KL-klY" secondAttribute="trailing" constant="49" id="q0Z-U9-SiN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="chineseOptionButton" destination="a0G-ks-7FG" id="6vd-Zx-pRI"/>
-                        <outlet property="decorativeOrLabel" destination="Fg9-3b-tHa" id="a9J-eI-nqj"/>
                         <outlet property="japaneseOptionButton" destination="6rP-X4-MKJ" id="pQK-pg-loq"/>
+                        <outlet property="titleLabel" destination="dHL-KL-klY" id="pMg-3l-vBL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="115"/>
+            <point key="canvasLocation" x="134.78260869565219" y="114.50892857142857"/>
         </scene>
         <!--Flashcard View Controller-->
         <scene sceneID="eMc-Sg-GIM">
             <objects>
-                <viewController storyboardIdentifier="FlashcardJPViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tAz-AW-ue5" customClass="FlashcardViewController" customModule="P5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FlashcardJPViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tAz-AW-ue5" customClass="FlashcardViewController" customModule="CharacterDrawer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gML-tl-bHq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,7 +153,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDH-94-wIa" customClass="DrawView" customModule="P5" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDH-94-wIa" customClass="DrawView" customModule="CharacterDrawer" customModuleProvider="target">
                                 <rect key="frame" x="87" y="128" width="240" height="240"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
@@ -264,7 +277,7 @@
         <!--History View Controller-->
         <scene sceneID="1nr-U6-t7r">
             <objects>
-                <viewController storyboardIdentifier="JPHistoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RRa-7y-jFS" customClass="HistoryViewController" customModule="P5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JPHistoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RRa-7y-jFS" customClass="HistoryViewController" customModule="CharacterDrawer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rTg-wQ-2Yn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -273,7 +286,7 @@
                                 <rect key="frame" x="20" y="44" width="374" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HistoryTableViewCell" rowHeight="200" id="sUF-vT-FXR" customClass="HistoryTableViewCell" customModule="P5" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HistoryTableViewCell" rowHeight="200" id="sUF-vT-FXR" customClass="HistoryTableViewCell" customModule="CharacterDrawer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sUF-vT-FXR" id="vwg-wg-OP0">
@@ -358,7 +371,7 @@
         <!--Flashcard View Controller-->
         <scene sceneID="2jm-Uh-bwc">
             <objects>
-                <viewController storyboardIdentifier="FlashcardCNViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bPd-X6-gR4" customClass="FlashcardViewController" customModule="P5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FlashcardCNViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bPd-X6-gR4" customClass="FlashcardViewController" customModule="CharacterDrawer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Qv-RN-aCV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -423,7 +436,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0LQ-eW-T5m" customClass="DrawView" customModule="P5" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0LQ-eW-T5m" customClass="DrawView" customModule="CharacterDrawer" customModuleProvider="target">
                                 <rect key="frame" x="87" y="128" width="240" height="240"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
@@ -538,7 +551,7 @@
         <!--History View Controller-->
         <scene sceneID="QRf-4P-DDh">
             <objects>
-                <viewController storyboardIdentifier="CNHistoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wqr-zE-fbw" customClass="HistoryViewController" customModule="P5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CNHistoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wqr-zE-fbw" customClass="HistoryViewController" customModule="CharacterDrawer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JZi-Um-IjL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -547,7 +560,7 @@
                                 <rect key="frame" x="20" y="44" width="374" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HistoryTableViewCell" rowHeight="200" id="ER3-Sk-HCJ" customClass="HistoryTableViewCell" customModule="P5" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HistoryTableViewCell" rowHeight="200" id="ER3-Sk-HCJ" customClass="HistoryTableViewCell" customModule="CharacterDrawer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ER3-Sk-HCJ" id="SRq-Gr-ndg">
@@ -631,6 +644,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Flag-China" width="600" height="400"/>
+        <image name="Flag-Japan" width="375" height="250"/>
         <image name="checkmark" catalog="system" width="64" height="56"/>
         <image name="xmark" catalog="system" width="64" height="56"/>
     </resources>
