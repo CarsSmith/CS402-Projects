@@ -20,8 +20,8 @@ Remaining Final Project TODO List as of 12/5, after the full implementation of t
 12. ~~Prevent further changes after doneButton is pressed.~~
 13. ~~Set things up to work for CN and not just JP.~~
 14. Fix all yellow errors that are popping up.
-15. Loading Screen
-16. App Icon
+15. ~~Loading Screen~~
+16. ~~App Icon~~
 17. ~~Main Screen Redesign~~
 18. ~~Ensure there's no landscape mode.~~
 19. Refactor sloppy code.
