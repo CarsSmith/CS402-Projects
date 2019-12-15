@@ -22,6 +22,6 @@ Remaining Final Project TODO List as of 12/5, after the full implementation of t
 14. Fix all yellow errors that are popping up.
 15. Loading Screen
 16. App Icon
-17. Main Screen Redesign
-18. Ensure there's no landscape mode.
+17. ~~Main Screen Redesign~~
+18. ~~Ensure there's no landscape mode.~~
 19. Refactor sloppy code.
